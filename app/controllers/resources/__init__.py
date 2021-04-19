@@ -1,1 +1,1 @@
-from .currency import CurrencyQuery
+from .currency.currency_query import CurrencyQuery
