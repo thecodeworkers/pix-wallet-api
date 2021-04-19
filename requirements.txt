@@ -3,3 +3,5 @@ python-dotenv
 cryptography
 mongoengine
 flask-cors
+flask_graphql
+graphene>=2.0
