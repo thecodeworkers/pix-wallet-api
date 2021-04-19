@@ -1,5 +1,3 @@
-from flask.globals import session
-
 def success_operation(service, method, data=''):
     details = data['id'] if 'id' in data else ''
     return {
