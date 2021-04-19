@@ -1,29 +1,10 @@
 from ....decorators.common import log_record
-from ....utils.api import success_operation
+from ....collections.currencies import Currencies
+from ....utils import success_operation, parser_all_object
 
 @log_record
 def get_all():
-    response = [
-        {
-            'id': 'sjsjjjalkdhdhd',
-            'name': 'Bitcoin',
-            'color': 'orange',
-            'gradients': [],
-            'active': True,
-            'type': 'CRYPTO',
-            'symbol': 'BTC',
-            'price': 52.000
-        },
-        {
-            'id': 'sjsjjjalkdhdhd',
-            'name': 'Bitcoin',
-            'color': 'orange',
-            'gradients': [],
-            'active': True,
-            'type': 'CRYPTO',
-            'symbol': 'BTC',
-            'price': 52.000
-        }
-    ]
+    currencies = Currencies.objects
+    currencies = parser_all_object(currencies)
 
-    return success_operation(__name__, get_all.__name__, response)
+    return success_operation(__name__, get_all.__name__, currencies)
