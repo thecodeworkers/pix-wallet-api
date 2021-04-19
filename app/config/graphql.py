@@ -1,5 +1,6 @@
 from flask_graphql import GraphQLView
 from graphene import Schema
+from ..middlewares import verify_app_token
 from ..controllers import *
 
 class AllQuerys(
@@ -23,5 +24,5 @@ def init_graphql(app):
         'Pix Wallet',
         schema=schema,
         graphiql=True,
-        # middleware=[]
+        middleware=[verify_app_token]
     ))
