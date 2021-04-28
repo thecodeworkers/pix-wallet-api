@@ -3,7 +3,7 @@ from flask_cors import CORS
 from .config  import init_db, init_graphql
 
 app = Flask(__name__)
-app.secret_key = b'\x9b\x0f\xe7\xc6\xdcJu\xb5\xeb\xaf\xbft\x1d\xed\x98@'
+app.secret_key = b')\xa4\xdd\x88~\xa5F\xd0\xf1\x12\x80i>bm\x9d'
 CORS(app)
 
 init_db()
